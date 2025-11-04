@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Untuk Caca 💕</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: radial-gradient(circle at top, #1a1a2e, #16213e);
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.05);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+        header img {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(255,192,203,0.7);
+        }
+        .main-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 25px auto;
+            display: block;
+            box-shadow: 0 0 20px rgba(255,182,193,0.7);
+            animation: pop 1s ease-in-out;
+        }
+        @keyframes pop {
+            0% {transform: scale(0.8); opacity: 0;}
+            100% {transform: scale(1); opacity: 1;}
+        }
+        .container {
+            background: rgba(255,255,255,0.05);
+            margin: 0 auto;
+            width: 90%;
+            max-width: 500px;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 0 15px rgba(255,192,203,0.3);
+        }
+        button {
+            background: #ff5c8d;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 15px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        button:hover {
+            background: #ff85a1;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 10px;
+            border: none;
+            outline: none;
+            font-family: inherit;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="Ikon Kartun.jpg" alt="ikon lucu">
+        <h2>Untuk Caca — Web Lucu & Romantis 💖</h2>
+    </header>
+    <img src="Ikon Kartun.jpg" alt="Foto Caca" class="main-photo">
+    <div class="container">
+        <h3>Hai Caca 🌷</h3>
+        <p>Siap-siap senyum ya, ini web kecil penuh canda, manis, dan dikit baper~ 😚</p>
+        <p>Aku pengen tau dong...</p>
+        <form id="formCaca">
+            <label>Kamu suka apa? 💕</label>
+            <input type="text" name="suka" required>
+
+            <label>Hobimu apa? 🌸</label>
+            <input type="text" name="hobi" required>
+
+            <label>Kamu orangnya gimana sih? 😚</label>
+            <textarea name="orangnya" rows="3" required></textarea>
+
+            <label>Kamu suka cowok yang gimana? 😳</label>
+            <textarea name="cowok" rows="3" required></textarea>
+
+            <button type="submit">Kirim ke WhatsApp 💌</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('formCaca').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const suka = this.suka.value;
+            const hobi = this.hobi.value;
+            const orangnya = this.orangnya.value;
+            const cowok = this.cowok.value;
+            const pesan = `Hai! Nih jawabanku ❤️%0A%0A` +
+                          `✨ Aku suka: ${suka}%0A` +
+                          `🎨 Hobiku: ${hobi}%0A` +
+                          `😊 Aku orangnya: ${orangnya}%0A` +
+                          `💘 Aku suka cowok yang: ${cowok}`;
+            window.open(`https://wa.me/?text=${pesan}`, '_blank');
+        });
+    </script>
+</body>
+</html>
